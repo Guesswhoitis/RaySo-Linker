@@ -17,6 +17,7 @@ class RaySoLink : AnAction() {
     fun getFileLanguage(fileType: FileType): String {
         val name = fileType.name
         //if ide does not have correct file type for ray.so can add an exception in here
+        println(name)
         return when(name) {
             "jsx" -> "JSX"
             "tsx" -> "TSX"
