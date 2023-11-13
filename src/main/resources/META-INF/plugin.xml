@@ -1,16 +1,16 @@
 <idea-plugin>
-    <id>com.RaySoLink</id>
-    <name>RaySoLink</name>
+    <id>so.ray.linker</id>
+    <name>Ray.so Linker</name>
     <vendor email="jameshulena1@gmail.com">Guesswhoitis</vendor>
     <vendor email="matthew@hailwood.nz">Hailwood</vendor>
     <description><![CDATA[
-    An open source plugin for JetBrains IDE's that allows the user to highlight code and quickly generate Ray.so links
+    An open source plugin for JetBrains IDE's that allows the user to generate code screenshots using ray.so
   ]]></description>
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
     <actions>
-        <action id="com.raysolink.RaySoLink" class="com.raysolink.RaySoLink" text="Create ray.so Link">
+        <action id="so.ray.linker.RaySoLink" class="so.ray.linker.RaySoLink" text="Generate ray.so screenshot">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>

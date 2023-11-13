@@ -1,4 +1,4 @@
-package com.raysolink
+package so.ray.linker
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
