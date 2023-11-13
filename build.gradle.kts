@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "so.ray.linker"
-version = "1.0"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -41,7 +41,5 @@ tasks {
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
 
-    publishPlugin {
-        token.set(System.getenv("JETBRAINS_GRADLE_TOKEN"))
-    }
+
 }
