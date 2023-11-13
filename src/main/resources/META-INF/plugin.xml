@@ -10,7 +10,7 @@
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
     <actions>
-        <action id="RaySoLink" class="RaySoLink" text="Create ray.so Link">
+        <action id="com.raysolink.RaySoLink" class="com.raysolink.RaySoLink" text="Create ray.so Link">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
