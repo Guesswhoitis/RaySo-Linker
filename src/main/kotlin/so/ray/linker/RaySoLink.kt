@@ -55,8 +55,6 @@ class RaySoLink : AnAction() {
             return
         }
 
-        Messages.showMessageDialog(project, fileType.name,"Error", Messages.getErrorIcon())
-
         val originalUrl =
             "https://ray.so/#language=${getFileLanguage(fileType)}&theme=raindrop&padding=16&background=true&code=$base64Code"
 
