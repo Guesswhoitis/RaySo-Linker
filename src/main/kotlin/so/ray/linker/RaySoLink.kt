@@ -14,14 +14,15 @@ import java.util.*
 
 class RaySoLink : AnAction() {
 
-    fun getFileLanguage(fileType: FileType): String {
+    private fun getFileLanguage(fileType: FileType): String {
         val name = fileType.name
         //if ide does not have correct file type for ray.so can add an exception in here
-        println(name)
-        return when(name) {
+        return when (name) {
             "jsx" -> "JSX"
+            "JSX Harmony" -> "JSX"
             "tsx" -> "TSX"
-            else -> name.toLowerCasePreservingASCIIRules()
+            "TypeScript JSX" -> "TSX"
+            else -> name.replace(" ","").toLowerCasePreservingASCIIRules()
         }
     }
 
@@ -54,14 +55,17 @@ class RaySoLink : AnAction() {
             return
         }
 
-        val originalUrl = "https://ray.so/#language=${getFileLanguage(fileType)}&theme=raindrop&padding=16&background=true&code=$base64Code"
+        Messages.showMessageDialog(project, fileType.name,"Error", Messages.getErrorIcon())
+
+        val originalUrl =
+            "https://ray.so/#language=${getFileLanguage(fileType)}&theme=raindrop&padding=16&background=true&code=$base64Code"
 
         val url = originalUrl.replace("+", "-")
 
         try {
             Desktop.getDesktop().browse(URI(url))
         } catch (e: Exception) {
-            Messages.showMessageDialog(project, "Failed to open URL", "Error", Messages.getErrorIcon())
+            Messages.showMessageDialog(project, "Failed to open URL - " + e.message, "Error", Messages.getErrorIcon())
         }
     }
 }
