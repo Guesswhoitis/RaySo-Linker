@@ -18,6 +18,8 @@ class RaySoLink : AnAction() {
         val name = fileType.name
         //if ide does not have correct file type for ray.so can add an exception in here
         return when(name) {
+            "jsx" -> "JSX"
+            "tsx" -> "TSX"
             else -> name.toLowerCasePreservingASCIIRules()
         }
     }
