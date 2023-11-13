@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "so.ray.linker"
-version = "1.3"
+version = "1.4"
 
 repositories {
     mavenCentral()
@@ -40,5 +40,6 @@ tasks {
         privateKey.set(System.getenv("PRIVATE_KEY"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
+
 
 }
