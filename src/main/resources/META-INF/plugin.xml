@@ -1,11 +1,14 @@
 <idea-plugin>
     <id>so.ray.linker</id>
     <name>Ray.so Linker</name>
-    <vendor email="jameshulena1@gmail.com">Guesswhoitis</vendor>
     <vendor email="matthew@hailwood.nz">Hailwood</vendor>
+    <vendor email="jameshulena1@gmail.com">Guesswhoitis</vendor>
     <description><![CDATA[
-    An open source plugin for JetBrains IDE's that allows the user to generate code screenshots using ray.so
-  ]]></description>
+    Adds the ability to allow the user to generate ray.so code screenshots.
+
+    To use this plugin, highlight your code you want to make a ray.so screenshot of, right click and select "Generate ray.so screenshot".
+    A browser window will then open taking you to ray.so with a ray.so screenshot generated from your code.
+]]></description>
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
