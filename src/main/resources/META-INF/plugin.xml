@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>so.ray.linker</id>
     <name>Ray.so Linker</name>
-    <vendor email="matthew@hailwood.nz">Hailwood</vendor>
     <vendor email="jameshulena1@gmail.com">Guesswhoitis</vendor>
+    <vendor email="matthew@hailwood.nz">Hailwood</vendor>
     <description><![CDATA[
     Adds the ability to allow the user to generate ray.so code screenshots.
 
@@ -13,7 +13,11 @@
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
     <actions>
-        <action id="so.ray.linker.RaySoLink" class="so.ray.linker.RaySoLink" text="Generate ray.so screenshot">
+        <action id="so.ray.linker.RaySoLink"
+                class="so.ray.linker.RaySoLink"
+                text="Generate Ray.so Screenshot"
+                icon="icons/icon-16.png"
+        >
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
